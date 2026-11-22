@@ -958,6 +958,19 @@ public:
 };
 REGISTER_CAMERA_SENSOR_HELPER(CameraSensorHelperOv13858, "ov13858")
 
+class CameraSensorHelperS5k5e8 : public CameraSensorHelper
+{
+public:
+	CameraSensorHelperS5k5e8()
+	{
+		/* 0x40 at 10bits. */
+		blackLevel_ = 4096;
+		gain_ = AnalogueGainLinear{ 1, 0, 0, 32 };
+		exposureMargin_ = 4;
+	}
+};
+REGISTER_CAMERA_SENSOR_HELPER(CameraSensorHelperS5k5e8, "s5k5e8")
+
 class CameraSensorHelperVd55g1 : public CameraSensorHelper
 {
 public:
