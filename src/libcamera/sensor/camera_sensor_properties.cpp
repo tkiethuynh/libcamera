@@ -611,6 +611,21 @@ const CameraSensorProperties *CameraSensorProperties::get(const std::string &sen
 			},
 			.sensorDelays = { },
 		} },
+		{ "s5k5e8", {
+			.unitCellSize = { 1120, 1120 },
+			.testPatternModes = {
+				{ controls::draft::TestPatternModeOff, 0 },
+				{ controls::draft::TestPatternModeSolidColor, 1 },
+				{ controls::draft::TestPatternModeColorBars, 2 },
+				{ controls::draft::TestPatternModeColorBarsFadeToGray, 3 },
+			},
+			.sensorDelays = {
+				.exposureDelay = 2,
+				.gainDelay = 1,
+				.vblankDelay = 2,
+				.hblankDelay = 2
+			},
+		} },
 		{ "vd55g1", {
 			.unitCellSize = { 2160, 2160 },
 			.testPatternModes = {
